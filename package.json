@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev:server": "live-server",
+    "dev:server": "node-sass",
     "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
     "dev": "run-p dev:*", "run-s lint": "htmlhint", "run-s lint": "stylelint-config-standard", "run-s lint": "run-s stylelint", "lint": "run-s standard --fix",
     "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
