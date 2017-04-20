@@ -1,77 +1,76 @@
+@import "_variables";
+
 body {
   margin: 0;
   background-color: #333;
   color: #fff;
+}
 
-  .clicky {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #aaf;
-    border: 1px solid #555;
-    box-shadow: #000 0 0 15px;
+table.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: $border;
+  border-bottom: $border;
+  border-bottom-right-radius: 6px;
+  background-color: #777;
+  box-shadow: $shadow;
+  font-family: $font;
 
-    &:hover {
-      cursor: pointer;
+  & h1 {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+
+  & td {
+    text-align: center;
+
+    &.label {
+      width: 80px;
+    }
+
+    &.label,
+    .result {
+      text-align: right;
     }
   }
 
-  table,
-  .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-top: 0;
-    border-left: 0;
-    border-right: 1px solid #555;
-    border-bottom: 1px solid #555;
-    border-bottom-right-radius: 6px;
-    background-color: #777;
-    box-shadow: #000 0 0 15px;
-    font-family: 'Courier New', Courier, monospace;
+  & button {
+    width: 80%;
+    background-color: #ccf;
+    color: #111;
+    text-align: center;
+    font-family: $font;
+    font-weight: normal;
+    font-size: 12px;
+    border: $border;
+    transition: $trans;
+    border-radius: 3px;
 
-    h1 {
-      margin: 0 10px;
-      font-size: 20px;
+    &:hover {
+      cursor: pointer;
+      background-color: #ddf;
+      width: 85%;
+      transition: $trans;
     }
 
-    td {
-      text-align: center;
+    &:active,
+    :focus {
+      outline: none;
     }
+  }
+}
 
-    button {
-      width: 80%;
-      background-color: #ccf;
-      color: #111;
-      text-align: center;
-      font-family: 'Courier New', Courier, monospace;
-      font-weight: normal;
-      font-size: 12px;
-      border: 1px solid #555;
-      transition: width 0.5s, background-color 0.5s;
-      border-radius: 3px;
+.clicky {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #aaf;
+  border: $border;
+  box-shadow: $shadow;
 
-      &:hover {
-        cursor: pointer;
-        background-color: #ddf;
-        width: 85%;
-        transition: width 0.5s, background-color 0.5s;
-      }
-
-      &:active,
-      &:focus {
-        outline: none;
-      }
-    }
-
-    td {
-      label {
-        width: 80px;
-      }
-
-      label,
-      .result {
-        text-align: right;
-      }
-    }
+  &:hover {
+    cursor: pointer;
   }
 }
