@@ -11,7 +11,7 @@
     "build:sass": "node-sass scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
     "build": "run-s lint:* build:*",
     "deploy:surge": "surge --project . --domain lamjess1-kg-tgc7noax99ajvzzg.surge.sh/",
-    "deploy": "run-s lint:* build:* deploy:surge"
+    "deploy": "run-s build deploy:surge"
   },
   "devDependencies": {
     "live-server": "^1.2.0",
