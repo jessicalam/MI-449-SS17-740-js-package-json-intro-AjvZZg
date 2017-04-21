@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "dev:server": "live-server",
-    "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
+    "dev:sass": "node-sass scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
     "dev": "run-p dev:*",
     "lint:htmlhint": "htmlhint index.html",
-    "lint:stylelint": "stylelint source/scss/style.scss",
+    "lint:stylelint": "stylelint scss/style.scss",
     "lint:standard": "standard clicky.js",
-    "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "build:sass": "node-sass scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
     "build": "run-s lint:* build:*",
     "deploy:surge": "surge --project . --domain lamjess1-kg-tgc7noax99ajvzzg.surge.sh/",
     "deploy": "run-s lint:* build:* deploy:surge"
